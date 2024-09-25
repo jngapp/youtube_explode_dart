@@ -120,8 +120,12 @@ class StreamClient {
       {required bool fullManifest}) async* {
     try {
       // Use await for instead of yield* to catch exceptions
+      // await for (final stream
+      //     in _getStream(videoId, VideoController.androidTestSuiteClient)) {
+      //   yield stream;
+      // }
       await for (final stream
-          in _getStream(videoId, VideoController.androidTestSuiteClient)) {
+      in _getStream(videoId, VideoController.androidClient)) {
         yield stream;
       }
       if (fullManifest) {
