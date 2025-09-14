@@ -11,7 +11,7 @@ part 'search_result.freezed.dart';
 typedef BaseSearchContent = SearchResult;
 
 @freezed
-class SearchResult with _$SearchResult {
+abstract class SearchResult with _$SearchResult {
   const SearchResult._();
 
   /// Metadata related to a search query result (video).
@@ -76,6 +76,9 @@ class SearchResult with _$SearchResult {
 
     /// Channel uploaded videos.
     int videoCount,
+
+    /// Channel thumbnails.
+    List<Thumbnail> thumbnails,
   ) = SearchChannel;
 }
 
