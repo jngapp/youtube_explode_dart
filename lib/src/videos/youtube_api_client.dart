@@ -41,16 +41,17 @@ class YoutubeApiClient {
     'context': {
       'client': {
         'clientName': 'ANDROID',
-        'clientVersion': '19.09.37',
-        'androidSdkVersion': 30,
+        'clientVersion': '20.10.38',
         'userAgent':
-        'com.google.android.youtube/19.09.37 (Linux; U; Android 11) gzip',
+        'com.google.android.youtube/20.10.38 (Linux; U; Android 11) gzip',
         'hl': 'en',
         'timeZone': 'UTC',
         'utcOffsetMinutes': 0,
+        'osName': 'Android',
+        'osVersion': '11',
       },
     },
-  }, 'https://www.youtube.com/youtubei/v1/player?key=AIzaSyA8eiZmM1FaDVjRy-df2KTyQ_vz_yYM39w&prettyPrint=false');
+  }, 'https://www.youtube.com/youtubei/v1/player?prettyPrint=false');
   /// This provides also muxed streams but seems less reliable than [ios].
   /// If you require an android client use [androidVr] instead.
   /// Note: This client includes androidSdkVersion which may require PO Token.
